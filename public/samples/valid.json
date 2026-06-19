@@ -1,0 +1,44 @@
+{
+  "protocolVersion": "0.2.5",
+  "name": "Text Toolkit (Sample)",
+  "description": "A fully spec-compliant sample Agent Card. Its url points at the bundled demo agent, so you can validate this card AND run live tasks against it. Every required and recommended field is present, so it scores 100 with no warnings.",
+  "url": "https://a2a-inspector-liart.vercel.app/api/demo-agent",
+  "version": "1.0.0",
+  "provider": {
+    "organization": "A2A Inspector",
+    "url": "https://a2a-inspector-liart.vercel.app"
+  },
+  "iconUrl": "https://a2a-inspector-liart.vercel.app/icon.svg",
+  "documentationUrl": "https://a2a-inspector-liart.vercel.app",
+  "preferredTransport": "JSONRPC",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "skills": [
+    {
+      "id": "echo",
+      "name": "Echo",
+      "description": "Repeats your message back verbatim.",
+      "tags": ["text", "demo"],
+      "examples": ["Say hello back to me", "Echo: testing 1 2 3"]
+    },
+    {
+      "id": "shout",
+      "name": "Shout",
+      "description": "Returns your message in UPPERCASE.",
+      "tags": ["text", "transform"],
+      "examples": ["make this loud", "shout the announcement"]
+    },
+    {
+      "id": "reverse",
+      "name": "Reverse",
+      "description": "Reverses the characters of your message.",
+      "tags": ["text", "transform"],
+      "examples": ["reverse: stressed"]
+    }
+  ]
+}

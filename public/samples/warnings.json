@@ -1,0 +1,20 @@
+{
+  "protocolVersion": "draft",
+  "name": "Sparse Agent (Sample)",
+  "description": "A card with zero errors but several warnings — it omits recommended fields and ships an empty modality/tag list. Validates as VALID (no errors) but scores below 100 to show the amber warning path.",
+  "url": "https://example.com/agents/sparse",
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": false
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": [],
+  "skills": [
+    {
+      "id": "summarize",
+      "name": "Summarize",
+      "description": "Condenses a block of text into a short summary.",
+      "tags": []
+    }
+  ]
+}

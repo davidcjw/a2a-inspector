@@ -1,0 +1,13 @@
+{
+  "protocolVersion": "0.2.5",
+  "description": "A deliberately malformed card for testing the validator's error rendering: a missing name, a non-http url, a numeric version, no capabilities, no output modes, and a broken skill.",
+  "url": "ftp://not-an-a2a-endpoint",
+  "version": 2,
+  "defaultInputModes": ["text/plain"],
+  "skills": [
+    {
+      "name": "Mystery",
+      "tags": "text"
+    }
+  ]
+}

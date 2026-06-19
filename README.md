@@ -16,6 +16,7 @@ and watch the task lifecycle stream in real time.
 
 - [What it does](#what-it-does)
 - [How it works](#how-it-works)
+- [Finding agents & cards to test](#finding-agents--cards-to-test)
 - [Tech](#tech)
 - [Develop](#develop)
 - [Project layout](#project-layout)
@@ -54,6 +55,37 @@ demo agent:  /api/demo-agent                  (JSON-RPC endpoint)
 All agent traffic is proxied **server-side** — the browser never calls a third-party agent
 directly. This dodges CORS and lets the server relay Server-Sent Events. No card or task data is
 persisted.
+
+## Finding agents & cards to test
+
+The input box accepts either a **base origin** (it appends `/.well-known/agent-card.json`, then
+the legacy `/.well-known/agent.json`) or a **direct URL** to a card ending in `.json`. So there
+are two ways to exercise the app:
+
+**Validate a card** — needs only a hosted JSON document, not a running agent:
+
+| Target | Paste this |
+| --- | --- |
+| Bundled demo agent (valid, live) | click **▶ bundled demo agent**, or paste the app's own URL |
+| Sample: valid card (100, live-runnable) | `https://a2a-inspector-liart.vercel.app/samples/valid.json` |
+| Sample: valid-with-warnings (amber path) | `https://a2a-inspector-liart.vercel.app/samples/warnings.json` |
+| Sample: malformed card (error path) | `https://a2a-inspector-liart.vercel.app/samples/invalid.json` |
+| Any card you host | a raw GitHub / gist URL, or any `…/agent-card.json` |
+
+The three sample cards live in [`public/samples/`](public/samples) and ship with the app, so they
+also work locally at `http://localhost:3000/samples/*.json`.
+
+**Run live tasks** (`message/send` / `message/stream`) — needs a real running agent:
+
+- **Bundled demo agent** — the simplest live target; the `valid.json` sample also points at it.
+- **[a2aproject/a2a-samples](https://github.com/a2aproject/a2a-samples)** — runnable example
+  agents (ADK, LangGraph, CrewAI, JS, …). Run one locally and point the Inspector at
+  `http://localhost:PORT` — the proxy's SSRF guard allows localhost for exactly this.
+- **[A2A spec](https://a2a-protocol.org/v0.2.5/specification/)** — example Agent Card JSON you can
+  host and validate.
+
+> Note: always-on **public** A2A agents on the open internet are still scarce and churn often, so
+> the reliable test targets are the bundled demo and locally-run samples.
 
 ## Tech
 
