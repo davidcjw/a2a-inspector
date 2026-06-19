@@ -71,6 +71,17 @@ export const IconSpinner = (p: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+export const IconGithub = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3-.3 6-1.5 6-6.6a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.5s-1.1-.3-3.5 1.3a12 12 0 0 0-6 0C6.6 1.1 5.5 1.4 5.5 1.4a4.6 4.6 0 0 0-.1 3.5A5 5 0 0 0 4 8.4c0 5.1 3 6.3 6 6.6a3.4 3.4 0 0 0-1 2.6V22" />
+  </svg>
+);
+export const IconStar = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2Z" />
+  </svg>
+);
+
 /** Two linked nodes — the A2A "handshake" logo mark. */
 export const Logo = (p: SVGProps<SVGSVGElement>) => (
   <svg

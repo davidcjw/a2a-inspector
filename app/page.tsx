@@ -10,8 +10,10 @@ import { TaskRunner } from "@/components/TaskRunner";
 import {
   IconArrow,
   IconBook,
+  IconGithub,
   IconMoon,
   IconSpinner,
+  IconStar,
   IconSun,
   Logo,
 } from "@/components/icons";
@@ -90,6 +92,19 @@ export default function Home() {
               className="inline-flex items-center gap-1.5 font-mono text-[12px] text-[--color-muted] transition-colors hover:text-[--color-fg]"
             >
               <IconBook width={14} height={14} /> spec
+            </a>
+            <a
+              href="https://github.com/davidcjw/a2a-inspector"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-1.5 font-mono text-[12px] text-[--color-muted] transition-colors hover:text-[--color-fg]"
+            >
+              <IconGithub width={14} height={14} /> Star
+              <IconStar
+                width={13}
+                height={13}
+                className="text-amber-500 transition-transform group-hover:scale-110"
+              />
             </a>
             <button
               onClick={toggleTheme}
