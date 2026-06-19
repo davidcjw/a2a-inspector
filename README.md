@@ -67,9 +67,9 @@ are two ways to exercise the app:
 | Target | Paste this |
 | --- | --- |
 | Bundled demo agent (valid, live) | click **▶ bundled demo agent**, or paste the app's own URL |
-| Sample: valid card (100, live-runnable) | `https://a2a-inspector-liart.vercel.app/samples/valid.json` |
-| Sample: valid-with-warnings (amber path) | `https://a2a-inspector-liart.vercel.app/samples/warnings.json` |
-| Sample: malformed card (error path) | `https://a2a-inspector-liart.vercel.app/samples/invalid.json` |
+| Sample: valid card (100, live-runnable) | `https://a2a-inspector.davidcjw.com/samples/valid.json` |
+| Sample: valid-with-warnings (amber path) | `https://a2a-inspector.davidcjw.com/samples/warnings.json` |
+| Sample: malformed card (error path) | `https://a2a-inspector.davidcjw.com/samples/invalid.json` |
 | Any card you host | a raw GitHub / gist URL, or any `…/agent-card.json` |
 
 The three sample cards live in [`public/samples/`](public/samples) and ship with the app, so they

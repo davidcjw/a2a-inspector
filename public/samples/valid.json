@@ -2,14 +2,14 @@
   "protocolVersion": "0.2.5",
   "name": "Text Toolkit (Sample)",
   "description": "A fully spec-compliant sample Agent Card. Its url points at the bundled demo agent, so you can validate this card AND run live tasks against it. Every required and recommended field is present, so it scores 100 with no warnings.",
-  "url": "https://a2a-inspector-liart.vercel.app/api/demo-agent",
+  "url": "https://a2a-inspector.davidcjw.com/api/demo-agent",
   "version": "1.0.0",
   "provider": {
     "organization": "A2A Inspector",
-    "url": "https://a2a-inspector-liart.vercel.app"
+    "url": "https://a2a-inspector.davidcjw.com"
   },
-  "iconUrl": "https://a2a-inspector-liart.vercel.app/icon.svg",
-  "documentationUrl": "https://a2a-inspector-liart.vercel.app",
+  "iconUrl": "https://a2a-inspector.davidcjw.com/icon.svg",
+  "documentationUrl": "https://a2a-inspector.davidcjw.com",
   "preferredTransport": "JSONRPC",
   "capabilities": {
     "streaming": true,
